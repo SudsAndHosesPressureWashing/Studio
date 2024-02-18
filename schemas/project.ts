@@ -63,6 +63,19 @@ export default defineType({
         validation: (Rule) => Rule.required()
     }),
     defineField({
+      name: 'servicesProvides',
+      title: 'Services Provided',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [
+            {type:'service'},
+          ]
+        },
+    ]
+    }),
+    defineField({
       name: 'section',
       title: 'Sections',
       type: 'array',
