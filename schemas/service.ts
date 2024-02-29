@@ -66,8 +66,7 @@ export default defineType({
     defineField({
       name: 'longDescription',
       title: 'Long Description',
-      type: 'text',
-      rows: 6,
+      type: 'blockContent',
       validation: (Rule) => Rule.required()
   }),
     defineField({
