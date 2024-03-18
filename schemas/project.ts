@@ -63,7 +63,7 @@ export default defineType({
         validation: (Rule) => Rule.required()
     }),
     defineField({
-      name: 'servicesProvides',
+      name: 'servicesProvided',
       title: 'Services Provided',
       type: 'array',
       of: [
