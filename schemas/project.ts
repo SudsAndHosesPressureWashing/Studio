@@ -76,18 +76,18 @@ export default defineType({
     ]
     }),
     defineField({
-      name: 'section',
+      name: 'sections',
       title: 'Sections',
       type: 'array',
       of: [
         {
           type: 'reference',
           to: [
-            {type:'textblock'},
             {type:'imagecluster'},
           ]
         },
         {type:'image'},
+        {type:'blockContent'},
     ]
     }),
   ],
