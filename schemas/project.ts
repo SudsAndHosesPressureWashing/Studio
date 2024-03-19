@@ -24,36 +24,10 @@ export default defineType({
       type: 'boolean'
     }),
     defineField({
-      name: 'beforeImage',
-      title: 'Before Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-      fields: [
-        {
-          name: 'caption',
-          type: 'string',
-          title: 'Caption',
-        }
-      ],
-      validation: (Rule) => Rule.required()
-    }),
-    defineField({
-      name: 'afterImage',
-      title: 'After Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-      fields: [
-        {
-          name: 'caption',
-          type: 'string',
-          title: 'Caption',
-        }
-      ],
-      validation: (Rule) => Rule.required()
+      name: 'mainBeforeAndAfter',
+      title: 'Main Before and After Image',
+      type: 'reference',
+      to: {type: 'beforeandafterimage'},
     }),
     defineField({
         name: 'shortDescription',
@@ -85,6 +59,7 @@ export default defineType({
           to: [
             {type:'blockContent'},
             {type:'imagecluster'},
+            {type:'beforeandafterimage'},
           ]
         },
         {type:'image'},
