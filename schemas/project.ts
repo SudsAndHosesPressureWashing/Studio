@@ -69,7 +69,7 @@ export default defineType({
   preview: {
     select: {
       title: 'name',
-      media: 'afterImage',
+      media: 'mainBeforeAndAfter.afterImage',
     },
     prepare(selection) {
       return {...selection}
