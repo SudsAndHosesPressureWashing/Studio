@@ -37,6 +37,22 @@ export default defineType({
         validation: (Rule) => Rule.required()
     }),
     defineField({
+      name: 'section',
+      title: 'Sections',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [
+            {type:'blockdocument'},
+            {type:'imagecluster'},
+            {type:'beforeandafterimage'},
+          ]
+        },
+        {type:'image'},
+    ]
+    }),
+    defineField({
       name: 'servicesProvided',
       title: 'Services Provided',
       type: 'array',
@@ -47,22 +63,6 @@ export default defineType({
             {type:'service'},
           ]
         },
-    ]
-    }),
-    defineField({
-      name: 'section',
-      title: 'Sections',
-      type: 'array',
-      of: [
-        {
-          type: 'reference',
-          to: [
-            {type:'blockContent'},
-            {type:'imagecluster'},
-            {type:'beforeandafterimage'},
-          ]
-        },
-        {type:'image'},
     ]
     }),
   ],
