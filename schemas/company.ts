@@ -48,9 +48,20 @@ export default defineType({
         description: 'The icon that shows up at the top left corner of the window when the page is open, or in the tab.'
     }),
     defineField({
-      name: 'aboutUs',
+      name: 'aboutus',
       title: 'About Us',
-      type: 'blockContent',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [
+            {type:'blockdocument'},
+            {type:'imagecluster'},
+            {type:'beforeandafterimage'},
+          ]
+        },
+        {type:'image'},
+    ]
     }),
   ],
   preview: {
