@@ -14,7 +14,7 @@ export default defineType({
     defineField({
       name: 'answer',
       title: 'Answer',
-      type: 'blockdocument',
+      type: 'blockContent',
       validation: (Rule) => Rule.required()
 
     }),
