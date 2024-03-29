@@ -15,7 +15,14 @@ export default defineType({
       name: 'slug',
       title: 'Project Slug',
       type: 'slug',
-      validation: (Rule) => Rule.required()
+      validation: (Rule) => Rule.required(),
+      options: {
+        source: 'name',
+        slugify: input => input
+          .toLowerCase()
+          .replace(/\s+/g, '-')
+          .slice(0, 200)
+      }
 
     }),
     defineField({
