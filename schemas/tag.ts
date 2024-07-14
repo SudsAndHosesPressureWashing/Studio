@@ -1,20 +1,14 @@
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
-  name: 'company',
-  title: 'Company',
+  name: 'tag',
+  title: 'Tag',
   type: 'document',
   fields: [
     defineField({
       name: 'name',
-      title: 'Company Name',
-      type: 'string',
-      validation: (Rule) => Rule.required()
-    }),
-    defineField({
-      name: 'link',
-      title: 'Reference URL',
-      type: 'url'
+      title: 'Name',
+      type: 'string'
     })
   ],
   preview: {

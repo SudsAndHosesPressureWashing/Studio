@@ -1,12 +1,11 @@
 import blockContent from './blockContent'
 import blockdocument from './blockdocument'
-import company from './company'
+import post from './post'
+import skill from './skill'
+import accomplishment from './accomplishment'
 import social from './social'
-import service from './service'
-import project from './project'
-import questionandanswer from './questionandanswer'
-import beforeandafterimage from './beforeandafterimage'
-import step from './servicestep'
-import imagecluster from './imagecluster'
+import company from './company'
+import role from './role'
+import tags from './tag'
 
-export const schemaTypes = [company, social, service, project, questionandanswer, step, imagecluster,blockContent, beforeandafterimage,blockdocument]
+export const schemaTypes = [social, accomplishment, skill, blockContent, blockdocument, company, role, tags]

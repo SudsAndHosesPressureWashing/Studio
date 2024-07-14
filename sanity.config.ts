@@ -7,8 +7,8 @@ export const projectId = process.env.SANITY_STUDIO_PROJECT_ID!
 export const dataset = process.env.SANITY_STUDIO_DATASET!
 
 export default defineConfig({
-  name: 'suds-and-hoses-pressure-washing',
-  title: 'Suds And Hoses Pressure Washing',
+  name: 'ddsmit',
+  title: 'ddsmit',
   projectId,
   dataset,
   plugins: [deskTool(), visionTool()],
